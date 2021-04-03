@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+{% block content %}
+    <p><h2>{{post.Title}}</h2></p>
+    <p>{{post.Body}}</p>
+    <a type="submit" class="btn btn-primary"
+       style="text-decoration: none;color: white;" href="{% url 'editPost' post.id %}">Edit Post</a>
+       <a type="submit" class="btn btn-secondary"
+       style="text-decoration: none;color: white;" href="{% url 'deletePost' post.id %}">Delete Post</a>
+{% endblock content %}
+
+</body>
+</html>
